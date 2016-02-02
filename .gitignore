@@ -1,0 +1,7 @@
+"db.sqlite3" 
+"__pycache__" 
+"*.pyc" 
+".project" 
+".pydevproject" 
+"functional_tests/__pycache__/" 
+"lists/__pycache__/" 
