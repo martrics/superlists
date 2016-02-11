@@ -58,8 +58,8 @@ class ListViewTest(TestCase):
         self.assertRedirects(response, '/lists/%d/' % (correct_list.id,))
         
     def test_displays_item_form(self):
-        list_=List.objects.create()
-        response = self.client.get('/llists/%d/' % (list_.id,))
+        list_ = List.objects.create()
+        response = self.client.get('/lists/%d/' % (list_.id,))
         self.assertIsInstance(response.context['form'], ItemForm)
         self.assertContains(response, 'name="text"')
         
@@ -83,6 +83,9 @@ class ListViewTest(TestCase):
     def test_for_invalid_input_shows_error_on_page(self):
         response = self.post_invalid_input()
         self.assertContains(response, escape(EMPTY_LIST_ERROR))
+        
+    def test_duplicate_item_validation_errors_end_up_on_lists_page(self):
+        
         
 class NewListTest(TestCase):
     def test_saving_a_POST_request(self):
