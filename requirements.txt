@@ -1,8 +1,5 @@
 Django==1.7
 ecdsa==0.13
-gunicorn==19.4.5
-paramiko==1.16.0
-pycrypto==2.6.1
 selenium==2.50.1
 virtualenv==14.0.5
 requests==2.9.1
