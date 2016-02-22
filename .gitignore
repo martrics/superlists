@@ -5,3 +5,4 @@
 ".pydevproject" 
 "functional_tests/__pycache__/" 
 "lists/__pycache__/" 
+"functional_tests/screendumps" 
